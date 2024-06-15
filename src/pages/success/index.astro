@@ -40,6 +40,10 @@
         }, 3000);
     }
     if (param3 && !(param1 && param2)){
+        success.classList.add('bg-green-400')
+        success.classList.remove('bg-red-400')
+        successIconCheck.classList.remove('hidden')
+        successIconError.classList.add('hidden')
         successText.innerHTML = `Mensaje enviado correctamente 😁`;
         setTimeout(() => {
             window.location.href = '/'
