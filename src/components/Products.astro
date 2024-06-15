@@ -11,15 +11,19 @@ console.log("🚀 ~ data:", data)
         {data.map(product => 
             <div class="border h-full flex flex-col justify-between">
                 <header>
-                    <img src={product.image} alt={product.title} class="w-full h-64 object-cover" />
+                    <img src={product.image} alt={product.title} class:list={['w-full h-64 object-cover', {"grayscale" : !product.stock}]} />
                     <div class="text-center p-5">
                         <h2 class="font-bold">{product.title}</h2>
                         <p class="font-semibold">$ {product.price}</p>
                         <p class="font-base">{product.description}</p>
+
                     </div>
                 </header>
                 <footer class="flex items-center justify-center p-4">
-                    <a class="text-[#191919] underline text-center" href={'/producto/'+product.id}>Comprar</a>
+                    {!product.stock ? 
+                         <p class="font-base font-bold text-red-600">Sin stock</p>: ''
+                    }
+                    <a class:list={["text-[#191919] underline text-center", {"hidden" : !product.stock}]} href={'/producto/'+product.id}>Comprar</a>
                 </footer>
             </div>
         )}

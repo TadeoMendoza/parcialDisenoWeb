@@ -57,7 +57,8 @@ const product = data.filter((item) => String(item.id) === slug)
                         </div>
                     </div>
                     <p class="text-xl">Disponibles: {i.cantStock}</p>
-                    <button class="inline-block border border-[#191919] text-[#191919] hover:bg-[#191919] hover:text-[#F9FEFF] duration-300 px-6 py-3">Agregar al carrito</button>
+                    <button class:list={["inline-block border border-[#191919] text-[#191919] hover:bg-[#191919] hover:text-[#F9FEFF] duration-300 px-6 py-3", {"hidden" : !i.stock}]}>Agregar al carrito</button>
+                    <button class:list={["inline-blocktext-[#191919] bg-red-600 text-[#F9FEFF] duration-300 px-6 py-3", {"hidden" : i.stock}]}>Sin stock</button>
                 </div>
             </div>
         )}

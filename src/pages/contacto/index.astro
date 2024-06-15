@@ -1,10 +1,40 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
 ---
 
 <Layout title="Contacto">
-	<main class="max-w-7xl mx-auto py-28 px-10 lg:px-0 flex flex-col gap-24">
+	<main class="max-w-7xl mx-auto py-28 px-10 lg:px-0 flex flex-col gap-6">
 		<h1 class="font-bold uppercase text-center text-4xl md:text-5xl">Contacto</h1>
+		<div class=" mx-auto p-5 items-center justify-center flex">
+			<form action="success" class="flex w-full flex-col gap-5" method="POST">
+				<div class="flex gap-5">
+					<div class="flex flex-col gap-4">
+						<label class="font-semibold" for="name">Nombre</label>
+						<input type="text" name="name" id="name" class="p-3 border border-gray-300 rounded-md" placeholder="ej: John" />
+					</div>
+					<div class="flex flex-col gap-4">
+						<label class="font-semibold" for="lastName">Apellido</label>
+						<input type="text" name="lastName" id="lastName" class="p-3 border border-gray-300 rounded-md" placeholder="ej: Doe" />
+					</div>
+				</div>
+				<div class="flex flex-col gap-4">
+					<label class="font-semibold" for="email">Correo electronico</label>
+					<input type="email" name="email" id="email" class="p-3 border border-gray-300 rounded-md" placeholder="ej: correo@correo.com" />
+				</div>
+				<div class="flex flex-col gap-4">
+					<label class="font-semibold" for="phone">Telefono</label>
+					<input type="text" name="phone" id="phone" class="p-3 border border-gray-300 rounded-md" placeholder="ej: +54 123456789" />
+				</div>
+				<div class="flex flex-col gap-4">
+					<label class="font-semibold" for="message">Mensaje</label>
+					<textarea name="message" id="message" class="p-3 border border-gray-300 rounded-md" placeholder="Me comunico por ..." />
+				</div>
+				<div class="flex justify-center">
+					<button type="submit" class="flex gap-2 border hover:border-[#191919] text-[#F9FEFF] hover:bg-[#F9FEFF] bg-[#191919] hover:text-[#191919] duration-300 hover:px-6 px-10 py-3">Enviar consulta 
+						<svg  width="24"  height="24" fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg>
+					</button>
+				</div>
+			</form>
+		</div>
 	</main>
-</Layout>
+</Layout> 

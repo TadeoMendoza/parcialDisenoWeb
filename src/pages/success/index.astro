@@ -1,0 +1,59 @@
+---
+---
+<section class="h-screen flex">
+    <div class="flex items-center justify-center flex-1 flex-col gap-10">
+        <div class="bg-green-400 p-10 text-white rounded-full inline-block" id="success">
+            <svg id="succesIconCheck" width="150"  height="150"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class=""><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
+            <svg id="succesIconError" width="150"  height="150"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="hidden"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+        </div>
+        <div class="text-wrap">
+            <p class="text-4xl font-semibold text-center" id="successText"></p>
+        </div>
+    </div>
+</section>
+<script>
+    // import confetti from 'canvas-confetti'
+    import confetti from 'canvas-confetti';
+      // Importa módulos npm.
+    const urlParams = new URLSearchParams(window.location.search);
+    const param1 = urlParams.get('password');
+    const param2 = urlParams.get('email');
+    const success = document.getElementById('success') as Element;
+    const param3 = urlParams.get('contact');
+    const successIconCheck = document.getElementById('succesIconCheck') as Element;
+    const successIconError = document.getElementById('succesIconError') as Element;
+
+    const successText = document.getElementById('successText') as Element;
+    if (param1 && param2){
+        successText.innerHTML = `Session iniciada correctamente 😁`;
+        confetti()
+        setTimeout(() => {
+            window.location.href = '/'
+        }, 2000);
+    }else {
+        successIconCheck.classList.add('hidden')
+        successIconError.classList.remove('hidden')
+        success.classList.remove('bg-green-400')
+        success.classList.add('bg-red-400')
+        successText.innerHTML = `Algo salio mal 🙁, revise sus datos y vuelva a intentarlo`;
+        setTimeout(() => {
+            window.location.href = '/login'
+        }, 3000);
+    }
+    if (param3){
+        successText.innerHTML = `Mensaje enviado correctamente 😁`;
+        confetti()
+        setTimeout(() => {
+            window.location.href = '/'
+        }, 2000);
+    }else{
+        successIconCheck.classList.add('hidden')
+        successIconError.classList.remove('hidden')
+        success.classList.remove('bg-green-400')
+        success.classList.add('bg-red-400')
+        successText.innerHTML = `Algo salio mal 🙁, revise sus datos y vuelva a intentarlo`;
+        setTimeout(() => {
+            window.location.href = '/contact'
+        }, 3000);
+    }
+</script>
