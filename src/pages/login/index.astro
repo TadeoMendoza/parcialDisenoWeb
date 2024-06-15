@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import imageLogin from '../../../public/img/login.jpg'
+import Image from 'astro/components/Image.astro';
+---
+
+<Layout title="Iniciar sesion">
+	<section class="max-w-7xl mx-auto py-28 px-10 lg:px-0 flex flex-col gap-6">
+		<h1 class="font-bold uppercase text-center text-4xl md:text-5xl">Iniciar sesion</h1>
+		<section class="flex flex-col md:flex-row md:max-h-[600px]">
+				<div class="md:w-3/6">
+					<Image src={imageLogin} alt="Imagen de inicio de sesion" class="h-full object-cover"  />
+				</div>
+				<div class="md:w-3/6 p-5 items-center flex flex-1 bg-[#191919] text-[#F9FEFF]">
+					<form action="" class="flex flex-1 flex-col gap-5">
+						<div class="flex flex-col gap-4">
+							<label for="email">Correo electronico</label>
+							<input type="email" name="email" id="email" class="p-3 border border-gray-300 rounded-md" placeholder="ej: correo@correo.com" />
+						</div>
+						<div class="flex flex-col gap-4">
+							<label for="password">Contraseña</label>
+							<input type="password" name="password" id="password" class="p-3 border border-gray-300 rounded-md" placeholder="ej: 123457" />
+						</div>
+						<div class="flex justify-center">
+							<button class="inline-block border border-[#F9FEFF] text-[#F9FEFF] hover:bg-[#F9FEFF] hover:text-[#191919] duration-300 hover:px-6 px-10 py-3">Iniciar sesión</button>
+
+						</div>
+					</form>
+				</div>
+		</section>
+	</section>
+</Layout>

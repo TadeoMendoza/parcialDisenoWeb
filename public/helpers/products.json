@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "title": "t-shirt classic fit",
+        "price": 9.99,
+        "description": "Algodon t-shirt with a round neck and short sleeves. Featuring a front print and a back print. 100% cotton.",
+        "gender": "woman",
+        "featured": true,
+        "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Red", "Blue", "Black"],
+        "stock": true,
+        "cantStock": 10
+    },
+    {
+        "id": 2,
+        "title": "hooded sweatshirt",
+        "price": 29.99,
+        "description": "Comfortable and warm hooded sweatshirt made of soft cotton blend fabric. Perfect for casual wear. Available in various colors.",
+        "gender": "unisex",
+        "featured": false,
+        "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "sizes": ["XS", "S", "M", "L", "XL"],
+        "colors": ["Gray", "Navy", "Black"],
+        "stock": true,
+        "cantStock": 15
+    },
+    {
+        "id": 3,
+        "title": "new product 1",
+        "price": 19.99,
+        "description": "Description of new product 1.",
+        "gender": "unisex",
+        "featured": false,
+        "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "sizes": ["S", "M", "L"],
+        "colors": ["White", "Black"],
+        "stock": true,
+        "cantStock": 20
+    },
+    {
+        "id": 4,
+        "title": "new product 2",
+        "price": 14.99,
+        "description": "Description of new product 2.",
+        "gender": "man",
+        "featured": true,
+        "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "sizes": ["M", "L", "XL"],
+        "colors": ["Blue", "Gray"],
+        "stock": true,
+        "cantStock": 12
+    },
+    {
+        "id": 5,
+        "title": "new product 3",
+        "price": 24.99,
+        "description": "Description of new product 3.",
+        "gender": "woman",
+        "featured": false,
+        "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "sizes": ["XS", "S", "M"],
+        "colors": ["Red", "Pink"],
+        "stock": true,
+        "cantStock": 8
+    },
+    {
+        "id": 6,
+        "title": "new product 4",
+        "price": 39.99,
+        "description": "Description of new product 4.",
+        "gender": "unisex",
+        "featured": true,
+        "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Black", "White"],
+        "stock": true,
+        "cantStock": 5
+    },
+    {
+        "id": 7,
+        "title": "new product 5",
+        "price": 49.99,
+        "description": "Description of new product 5.",
+        "gender": "man",
+        "featured": false,
+        "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "sizes": ["M", "L"],
+        "colors": ["Green", "Yellow"],
+        "stock": true,
+        "cantStock": 10
+    },
+    {
+        "id": 8,
+        "title": "new product 5",
+        "price": 49.99,
+        "description": "Description of new product 5.",
+        "gender": "man",
+        "featured": false,
+        "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "sizes": ["M", "L"],
+        "colors": ["Green", "Yellow"],
+        "stock": true,
+        "cantStock": 10
+    }
+]
+

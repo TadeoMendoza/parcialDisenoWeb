@@ -4,23 +4,23 @@ import Logo from "../../public/img/logo.png";
 
 ---
 <nav class="fixed top-0 bg-[#F9FEFF] shadow-sm p-5 w-full flex z-10 [&>*]:text-[#191919] ">
-    <div class="w-full hidden lg:flex max-w-7xl mx-auto px-14 md:px-0 items-center">
+    <div class="w-full hidden lg:flex max-w-7xl mx-auto px-14 md:px-0 items-center" id="navMenu">
         <ul class="flex gap-5 justify-start w-full items-center">
-            <p class="font-bold text-xl">LOGO ACA</p>
-            <li><a href="">Colección</a></li>
-            <li><a href="">Contacto</a></li>
-            <li><a href="">Sobre nosotros</a></li>
+            <a class="font-bold text-xl" href="/">LOGO ACA</a>
+            <li><a href="/productos">Colección</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/sobre-nosotros">Sobre nosotros</a></li>
         </ul>
         <ul class="flex gap-5 justify-end w-full items-center">
             <li>
-                <a href="https://facebook.com">
+                <a href="/https://facebook.com">
                     <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
                     </svg>
                 </a>
             </li>
             <li>
-                <a href="https://twitter.com">
+                <a href="/https://twitter.com">
                     <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
@@ -29,7 +29,7 @@ import Logo from "../../public/img/logo.png";
                 </a>
             </li>
             <li>
-                <a href="https://instagram.com">
+                <a href="/https://instagram.com">
                     <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
                         <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" />
@@ -37,7 +37,7 @@ import Logo from "../../public/img/logo.png";
                 </a>
             </li>
             <li>
-               <a href=""> Iniciar sesión</a>
+               <a href="/login">Iniciar sesión</a>
             </li>
             <li>
                 <button class="bg-[#191919]  px-2 pr-4 py-1 rounded-full text-[#F9FEFF] items-center flex ">
@@ -51,9 +51,71 @@ import Logo from "../../public/img/logo.png";
         </ul>
     </div>
     <ul class="lg:hidden w-full flex justify-end px-10">
-        <svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6h16" /><path d="M7 12h13" />
-            <path d="M10 18h10" />
-        </svg>
+        <button id="menuButton">
+            <svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6h16" /><path d="M7 12h13" />
+                <path d="M10 18h10" />
+            </svg>
+        </button>
     </ul>
+    <aside class="hidden bg-[#F9FEFF] p-5 absolute top-0 left-0 w-3/6 h-screen z-[9999] shadow-2xl" id="aside">
+        <button class="w-full flex justify-end" id="closeButton">
+            <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" />
+            </svg>
+        </button>
+        <ul class="flex flex-col gap-5 justify-center items-center h-full">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/productos">Colección</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/sobre-nosotros">Sobre nosotros</a></li>
+            <li class="flex gap-4">
+                <a href="/https://facebook.com">
+                    <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                    </svg>
+                </a>
+                <a href="/https://twitter.com">
+                    <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                        <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                    </svg>
+                </a>
+                <a href="/https://instagram.com">
+                    <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+               <a href="/login">Iniciar sesión</a>
+            </li>
+            <li>
+                <button class="bg-[#191919]  px-2 pr-4 py-1 rounded-full text-[#F9FEFF] items-center flex">
+                    <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l14 1l-1 7h-13" />
+                    </svg>
+                    <p class="text-sm ml-1 text-[#F9FEFF]">1</p>
+                </button>
+            </li>
+        </ul>
+    </aside>
 </nav>
+    
+
+
+<script>
+    const navButton = document.getElementById('menuButton') as Element;
+    const navMenu = document.getElementById('aside') as Element;
+    const closeButton = document.getElementById('closeButton') as Element;
+    navButton.addEventListener('click', () => {
+        console.log("click");
+        navMenu.classList.toggle('hidden');
+    });
+    closeButton.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden');
+    });
+</script>

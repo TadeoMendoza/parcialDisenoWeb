@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets'
+import products from '../../public/helpers/products.json'
+
+const data = products 
+console.log("🚀 ~ data:", data)
+---
+
+<section>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
+        {data.map(product => 
+            <div class="border h-full flex flex-col justify-between">
+                <header>
+                    <img src={product.image} alt={product.title} class="w-full h-64 object-cover" />
+                    <div class="text-center p-5">
+                        <h2 class="font-bold">{product.title}</h2>
+                        <p class="font-semibold">$ {product.price}</p>
+                        <p class="font-base">{product.description}</p>
+                    </div>
+                </header>
+                <footer class="flex items-center justify-center p-4">
+                    <a class="text-[#191919] underline text-center" href={'/producto/'+product.id}>Comprar</a>
+                </footer>
+            </div>
+        )}
+    </div>
+</section>

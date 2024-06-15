@@ -5,24 +5,31 @@
         <div class="flex flex-col gap-5">
             <p class="font-bold text-[#F9FEFF]/75">¿Dudas?</p>
             <ul class="space-y-5 underline">
-                <li><a class="">Contacto</a></li>
-                <li><a class="">Mí pedido</a></li>
-                <li><a class="">Preguntas frecuentes</a></li>
-                <li><a class="">Ubicación</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="/seguimiento">Mí pedido</a></li>
+                <li><a href="/preguntas-frecuentes">Preguntas frecuentes</a></li>
+                <li><a href="/sobre-nosotros#ubicacion">Ubicación</a></li>
             </ul>
         </div>
         <div class="flex flex-col gap-5">
             <p class="font-bold text-[#F9FEFF]/75">Links rápidos</p>
             <ul class="space-y-5 underline">
-                <li><a class="">Inicio</a></li>
-                <li><a class="">Catálogo</a></li>
-                <li><a class="">Sobre nosotros</a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/productos">Catálogo</a></li>
+                <li><a href="/sobre-nosotros">Sobre nosotros</a></li>
             </ul>
         </div>
         <div class="flex flex-col max-w-[550px] flex-auto gap-5">
             <p class="font-bold text-[#F9FEFF]/75">¡No te pierdas las ultimas novedades!</p>
             <p>Al introducir su dirección de correo electrónico aquí abajo, acepta recibir nuestra newsletter con las últimas novedades sobre nuestras colecciones, eventos e iniciativas.</p>
-            <input type="text" class="bg-transparent border-b uppercase p-4" placeholder="Ingrese su correo electronico">
+            <div class="flex">
+                <input type="text" class="bg-transparent border-b uppercase p-4 w-full" placeholder="Ingrese su correo electronico">
+                <button class="bg-[#F9FEFF] text-[#191919] p-4">
+                    <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-send"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M10 14l11 -11" /><path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
 </footer>

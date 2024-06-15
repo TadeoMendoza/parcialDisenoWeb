@@ -1,0 +1,65 @@
+---
+import products from '../../../public/helpers/products.json'
+import Layout from '../../layouts/Layout.astro'
+import {type Root2} from  '../../types/api'
+
+const data = products
+console.log("🚀 ~ data:", data)
+export async function getStaticPaths() {
+    return[
+        { params: { slug: '1' } },
+        { params: { slug: '2' } },
+        { params: { slug: '3' } },
+        { params: { slug: '4' } },
+        { params: { slug: '5' } },
+        { params: { slug: '6' } },
+        { params: { slug: '7' } },
+        { params: { slug: '8' } },
+        { params: { slug: '9' } },
+        { params: { slug: '10' } },
+        { params: { slug: '11' } },
+        { params: { slug: '12' } },
+        
+    ]   
+}
+
+const { slug } = Astro.params;
+const product = data.filter((item) => String(item.id) === slug)
+---
+<Layout title={String(product.map(i => i.title))}>
+    <main class="max-w-7xl mx-auto py-28 px-10 lg:px-0 flex flex-col gap-5">
+        <a href="/productos" class="underline">Volver</a>
+        {product.map(i => 
+            <div class="flex flex-col md:flex-row items-center h-auto">
+                <div class="w-full md:w-1/2">
+                    <img src={i.image} alt={i.title} class="w-full h-auto md:h-3/6 object-cover" />
+                </div>
+                <div class="p-5 flex flex-col gap-5 w-full md:w-1/2">
+                    <h1 class="font-bold text-4xl md:text-4xl md:text-5xl uppercase text-center md:text-left">{i.title}</h1>
+                    <p class="text-2xl">${i.price}</p>
+                    <p class="text-xl">{i.description}</p>
+                    <div class="flex flex-col md:flex-row gap-10 md:gap-20">
+                        <div class="flex flex-col gap-5">
+                            <p class="font-semibold">Tallas</p>
+                            <div class="flex flex-wrap gap-5">
+                                {i.sizes?.map(size => 
+                                    <button class="bg-[#191919] px-2 py-1 text-[#F9FEFF]">{size}</button>
+                                )}
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-5">
+                            <p class="font-semibold">Colores</p>
+                            <div class="flex flex-wrap gap-5">
+                                {i.colors?.map(color => 
+                                    <button class="border border-[#191919] px-2 py-1 text-[#191919]">{color}</button>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xl">Disponibles: {i.cantStock}</p>
+                    <button class="inline-block border border-[#191919] text-[#191919] hover:bg-[#191919] hover:text-[#F9FEFF] duration-300 px-6 py-3">Agregar al carrito</button>
+                </div>
+            </div>
+        )}
+    </main>
+</Layout>
