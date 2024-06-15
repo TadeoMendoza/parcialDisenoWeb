@@ -12,8 +12,7 @@
     </div>
 </section>
 <script>
-    // import confetti from 'canvas-confetti'
-    import confetti from 'canvas-confetti';
+    // import confetti from 'canvas-confetti
       // Importa módulos npm.
     const urlParams = new URLSearchParams(window.location.search);
     const param1 = urlParams.get('password');
@@ -26,7 +25,7 @@
     const successText = document.getElementById('successText') as Element;
     if ((param1 && param2) && !param3){
         successText.innerHTML = `Session iniciada correctamente 😁`;
-        confetti()
+        
         setTimeout(() => {
             window.location.href = '/'
         }, 2000);
@@ -42,7 +41,6 @@
     }
     if (param3 && !(param1 && param2)){
         successText.innerHTML = `Mensaje enviado correctamente 😁`;
-        confetti()
         setTimeout(() => {
             window.location.href = '/'
         }, 2000);
