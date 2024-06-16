@@ -1,0 +1,58 @@
+---
+import Image from "astro/components/Image.astro";
+import mans from '../../public/img/mans.jpg';
+import woman from '../../public/img/woman.jpg';
+import all from '../../public/img/all.jpg';
+
+---
+<section class="flex flex-col lg:flex-row h-full gap-5 [&>*]:font-bold">
+    <div class="flex  flex-auto gap-5 w-full">
+        <div class="h-full w-full lg:w-3/6 border border-1">
+            <a href="/productos/hombres" class="relative hover:grayscale duration-300">
+                <Image src={mans} alt="Hero" class="object-cover  h-[250px] w-full" />
+                <div class="absolute top-10 right-0 left-0 flex justify-center p-5">
+                    <div class="px-2 py-1 rounded-lg bg-[#F9FEFF]/25 backdrop-blur-3xl text-[#F9FEFF] self-center">
+                        <p>Hombres</p>
+                    </div>
+                </div>
+                <div class="absolute bottom-10 right-0 left-0 flex flex-col gap-5 justify-center p-5">
+                    <div class="hover:px-5 px-10 py-3 border duration-300  border-[#F9FEFF] rounded-lg bg-[#F9FEFF]/25 backdrop-blur-3xl text-[#F9FEFF] self-center">
+                        <button class="">Explora la colección</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="h-full  w-full lg:w-3/6 border border-1">
+            <a href="/productos/mujeres" class="relative hover:grayscale duration-300">
+                <Image src={woman} alt="Hero" class="object-cover h-[250px]  w-full " />
+                <div class="absolute top-10 right-0 left-0 flex justify-center p-5">
+                    <div class="px-2 py-1 rounded-lg bg-[#F9FEFF]/25 backdrop-blur-3xl text-[#F9FEFF] self-center">
+                        <p>Mujeres</p>
+                    </div>
+                </div>
+                <div class="absolute bottom-10 right-0 left-0 flex flex-col gap-5 justify-center p-5">
+    
+                    <div class="hover:px-5 px-10 py-3 border duration-300 border-[#F9FEFF] rounded-lg bg-[#F9FEFF]/25 backdrop-blur-3xl text-[#F9FEFF] self-center">
+                        <button class="">Explora la colección</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="h-full  w-full lg:w-3/6 border border-1">
+        <a href="/productos/todos" class="relative hover:grayscale duration-300">
+            <Image src={all} alt="Hero" class="object-cover h-[250px]  w-full " />
+            <div class="absolute top-10 right-0 left-0 flex justify-center p-5">
+                <div class="px-2 py-1 rounded-lg bg-[#F9FEFF]/25 backdrop-blur-3xl text-[#F9FEFF] self-center">
+                    <p>Todos</p>
+                </div>
+            </div>
+            <div class="absolute bottom-10 right-0 left-0 flex flex-col gap-5 justify-center p-5">
+
+                <div class="hover:px-5 px-10 py-3 border duration-300 border-[#F9FEFF] rounded-lg bg-[#F9FEFF]/25 backdrop-blur-3xl text-[#F9FEFF] self-center">
+                    <button class="">Explora la colección</button>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>

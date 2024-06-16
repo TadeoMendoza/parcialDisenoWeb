@@ -1,8 +1,12 @@
 ---
 import { Image } from 'astro:assets'
 import products from '../../public/helpers/products.json'
+const slug = Astro.params.slug
+console.log("🚀 ~ params:", slug)
 
-const data = products 
+const translatedFilter = slug === 'hombres' ? ['man'] : slug === 'todos' ? ['woman', 'man', 'unisex'] : ['woman'];
+
+const data = products.filter(product => translatedFilter.includes(product.gender));
 console.log("🚀 ~ data:", data)
 ---
 

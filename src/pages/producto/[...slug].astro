@@ -28,7 +28,7 @@ const product = data.filter((item) => String(item.id) === slug)
 ---
 <Layout title={String(product.map(i => i.title))}>
     <main class="max-w-7xl mx-auto py-28 px-10 lg:px-0 flex flex-col gap-5">
-        <a href="/productos" class="underline">Volver</a>
+        <a href="/productos/todos" class="underline">Volver</a>
         {product.map(i => 
             <div class="flex flex-col md:flex-row items-center h-auto">
                 <div class="w-full md:w-1/2">
