@@ -25,9 +25,9 @@ console.log("🚀 ~ data:", data)
                 </header>
                 <footer class="flex items-center justify-center p-4">
                     {!product.stock ? 
-                         <p class="font-base font-bold text-red-600">Sin stock</p>: ''
+                         <p class="font-base font-bold text-red-600 text-lg">Sin stock</p>: ''
                     }
-                    <a class:list={["text-[#191919] underline text-center", {"hidden" : !product.stock}]} href={'/producto/'+product.id}>Comprar</a>
+                    <a class:list={["text-[#F9FEFF]  text-center text-lg bg-[#191919] px-6 py-2 hover:px-5 duration-300 ", {"hidden" : !product.stock}]} href={'/producto/'+product.id}>Comprar</a>
                 </footer>
             </div>
         )}
