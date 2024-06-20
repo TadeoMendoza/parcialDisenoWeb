@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://parcial-diseno-web.vercel.app/sitemap-index.xml
+Sitemap: https://website-parcial.tadeomendoza.com.ar/sitemap-index.xml
